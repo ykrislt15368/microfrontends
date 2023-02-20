@@ -18,6 +18,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: npm install --force
+      - run: sudo apt-get update
+      - run: sudo apt-get install openssl
       - run: npx browserslist@latest --update-db
       - run: npm run build
 
