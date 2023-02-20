@@ -18,6 +18,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: npm install --force
+      - run: npx browserslist@latest --update-db
       - run: npm run build
 
       - uses: shinyinc/action-aws-cli@v1.2
